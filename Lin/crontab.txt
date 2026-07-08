@@ -1,0 +1,6 @@
+PATH=/home/murata_RH8/.local/bin:/home/murata_RH8/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+
+# 毎日毎時間 **:00 に実行
+0 * * * * python /home/Notification/NotifiSeibis.py
+# 毎日毎時間 **:30 に実行
+30 * * * * python /home/Notification/NotifiSeibis.py
