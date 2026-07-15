@@ -1,6 +1,21 @@
+# crontab -e
+# 以下、記載する。
+
 PATH=/home/murata_RH8/.local/bin:/home/murata_RH8/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
 
 # 毎日毎時間 **:00 に実行
-0 * * * * python /home/Notification/NotifiSeibis.py
+0 * * * * cd /home/Notification/ && python NotifiSeibis.py && python NortifiNico.py
+# 毎日毎時間 **:10 に実行
+10 * * * * cd /home/Notification/ && python NortifiNico.py
+# 毎日毎時間 **:15 に実行
+15 * * * * cd /home/Notification/ && python NotifiSeibis.py
+# 毎日毎時間 **:20 に実行
+20 * * * * cd /home/Notification/ && python NortifiNico.py
 # 毎日毎時間 **:30 に実行
-30 * * * * python /home/Notification/NotifiSeibis.py
+30 * * * * cd /home/Notification/ && python NotifiSeibis.py && python NortifiNico.py
+# 毎日毎時間 **:40 に実行
+40 * * * * cd /home/Notification/ && python NortifiNico.py
+# 毎日毎時間 **:45 に実行
+45 * * * * cd /home/Notification/ && python NotifiSeibis.py && python NortifiNico.py
+# 毎日毎時間 **:50 に実行
+50 * * * * cd /home/Notification/ && python NortifiNico.py
